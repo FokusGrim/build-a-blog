@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+   
+{% block content %}
+
+
+    <h1><center>View Blogs</center></h1>
+   
+        <ul>
+        {% for test in blogs %}
+            <h2><a href = "./singleblog?id={{test.id}}"> {{ test.title }}</a></h2>
+        
+            <h3>{{ test.body }}</h3>
+            <hr />
+        {% endfor %}
+
+    </ul>
+
+{% endblock %}
